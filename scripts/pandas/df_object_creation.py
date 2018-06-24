@@ -3,6 +3,8 @@ import pandas as pd
 # numpy is a multidimentional array
 import numpy as np
 
+print("numpy",np)
+
 # 1. Object creation
 # creating series
 series = pd.Series([1,3,5,np.nan,6,8])
@@ -11,6 +13,8 @@ print(series)
 # creating datetime index using dataframe
 dates = pd.date_range('20130101',periods=6)
 print(dates)
+print("np rand",np.random.randn(2,5))
+
 
 print(np.random.randn(6,4))
 # creating data frame

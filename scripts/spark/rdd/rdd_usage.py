@@ -53,6 +53,16 @@ print(header)#extract header
 # transform : map and groupby
 # coalesce 1 - denoting the number of partition data
 
+step1= data.filter(lambda line: line != header)
+print(step1.collect())
+
+step2 = step1.map(lambda line: line.split(","))
+print(step2.collect)
+
+step3= step2.map(lambda x: ((x[1]), string_to_int(x[5])))
+print(step3.collect)
+
+
 print(data.filter(lambda line: line != header).
       map(lambda line: line.split(",")).map(
     lambda x: ((x[1]), string_to_int(x[5]))).
